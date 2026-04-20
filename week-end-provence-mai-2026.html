@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un week-end en Provence — 14 au 18 mai 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #faf6ee;
+    --bg-warm: #f2ebdd;
+    --ink: #2a2622;
+    --ink-soft: #55504a;
+    --terracotta: #a7542e;
+    --terracotta-dark: #7d3d20;
+    --olive: #5c6b47;
+    --gold: #b8935a;
+    --sea: #2d5769;
+    --sea-light: #6b92a3;
+    --stone: #d8cdb8;
+    --rule: #c9bda6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter','Helvetica Neue',Arial,sans-serif;
+    font-size:17px;
+    line-height:1.7;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Playfair Display',Georgia,serif}
+  .script{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic}
+  main{max-width:960px;margin:0 auto;padding:0 28px}
+  a{color:var(--terracotta);text-decoration:none;border-bottom:1px solid rgba(167,84,46,.3);transition:all .2s}
+  a:hover{border-bottom-color:var(--terracotta)}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(160deg,#3a5a6a 0%,#5c6b47 50%,#a7542e 100%);
+    color:#f8f1e3;
+    padding:110px 28px 90px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before,.hero::after{
+    content:'';position:absolute;border-radius:50%;pointer-events:none;
+  }
+  .hero::before{
+    width:600px;height:600px;background:radial-gradient(circle,rgba(255,231,180,.18),transparent 70%);
+    top:-200px;right:-150px;
+  }
+  .hero::after{
+    width:500px;height:500px;background:radial-gradient(circle,rgba(108,160,180,.15),transparent 70%);
+    bottom:-200px;left:-120px;
+  }
+  .hero-inner{position:relative;z-index:1;max-width:720px;margin:0 auto}
+  .hero-kicker{
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;letter-spacing:.35em;text-transform:uppercase;
+    opacity:.85;margin-bottom:28px;
+  }
+  .hero-title{
+    font-family:'Playfair Display',serif;font-weight:500;
+    font-size:clamp(44px,7vw,76px);line-height:1.08;
+    margin-bottom:22px;letter-spacing:-.5px;
+  }
+  .hero-title em{font-style:italic;color:#ffd9a8;font-weight:400}
+  .hero-dates{
+    font-family:'Cormorant Garamond',serif;font-weight:400;
+    font-size:24px;letter-spacing:.18em;text-transform:uppercase;
+    opacity:.95;margin-top:10px;
+  }
+  .hero-ornament{
+    display:block;margin:36px auto 20px;width:60px;height:1px;
+    background:rgba(248,241,227,.6);position:relative;
+  }
+  .hero-ornament::before{
+    content:'◆';position:absolute;top:-10px;left:50%;transform:translateX(-50%);
+    color:rgba(248,241,227,.8);font-size:10px;
+  }
+  .hero-tagline{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:22px;opacity:.95;max-width:520px;margin:0 auto;
+  }
+
+  /* SECTIONS */
+  section{padding:80px 0}
+  .section-eyebrow{
+    font-family:'Cormorant Garamond',serif;
+    font-size:14px;letter-spacing:.4em;text-transform:uppercase;
+    color:var(--terracotta);margin-bottom:18px;
+  }
+  .section-title{
+    font-family:'Playfair Display',serif;font-weight:500;
+    font-size:clamp(32px,4.5vw,46px);line-height:1.15;
+    margin-bottom:24px;letter-spacing:-.4px;
+  }
+  .section-title em{font-style:italic;color:var(--terracotta)}
+  .section-lede{
+    font-family:'Cormorant Garamond',serif;
+    font-size:22px;line-height:1.55;color:var(--ink-soft);
+    max-width:680px;
+  }
+  .ornament-rule{
+    width:80px;height:1px;background:var(--rule);
+    margin:60px auto;position:relative;
+  }
+  .ornament-rule::before{
+    content:'◆';position:absolute;top:-10px;left:50%;transform:translateX(-50%);
+    color:var(--gold);font-size:10px;background:var(--bg);padding:0 10px;
+  }
+
+  /* PROLOGUE */
+  .prologue{background:var(--bg)}
+  .prologue p{font-size:19px;margin-bottom:22px;max-width:700px}
+  .prologue p.drop::first-letter{
+    font-family:'Playfair Display',serif;float:left;
+    font-size:72px;line-height:.85;padding:8px 14px 0 0;
+    color:var(--terracotta);font-weight:400;
+  }
+
+  /* THE TRIP AT A GLANCE */
+  .at-glance{
+    background:var(--bg-warm);
+    padding:80px 0;
+  }
+  .at-glance-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    margin-top:50px;
+  }
+  .glance-cell{
+    padding:36px 22px;text-align:center;border-right:1px solid var(--rule);
+  }
+  .glance-cell:last-child{border-right:none}
+  .glance-num{
+    font-family:'Playfair Display',serif;font-weight:500;
+    font-size:52px;color:var(--terracotta);line-height:1;
+    margin-bottom:8px;
+  }
+  .glance-label{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:18px;color:var(--ink-soft);
+  }
+
+  /* HOTEL CARD */
+  .hotel{
+    padding:100px 0;position:relative;
+  }
+  .hotel.alpilles{background:var(--bg)}
+  .hotel.mer{
+    background:linear-gradient(180deg,#e8eff2 0%,#dce6eb 100%);
+  }
+  .hotel-header{text-align:center;margin-bottom:60px}
+  .hotel-chapter{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:20px;color:var(--olive);margin-bottom:10px;
+  }
+  .hotel.mer .hotel-chapter{color:var(--sea)}
+  .hotel-name{
+    font-family:'Playfair Display',serif;font-weight:500;
+    font-size:clamp(40px,6vw,64px);line-height:1.05;
+    margin-bottom:16px;letter-spacing:-.5px;
+  }
+  .hotel-loc{
+    font-family:'Cormorant Garamond',serif;
+    font-size:17px;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .hotel-visual{
+    height:340px;margin:0 auto 50px;border-radius:2px;
+    position:relative;overflow:hidden;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.15);
+  }
+  .hotel-visual{
+    height:520px;
+    background-size:cover;background-position:center;
+    overflow:hidden;
+  }
+  .hotel.alpilles .hotel-visual{
+    background-image:
+      linear-gradient(180deg,rgba(0,0,0,.0) 40%,rgba(0,0,0,.55) 100%),
+      url('https://www.baumaniere.com/wp-content/uploads/HO%CC%82TEL-ROMANTIQUE-EN-PROVENCE--2048x900.jpg');
+  }
+  .hotel.mer .hotel-visual{
+    background:#1c3e4e;
+  }
+  .hotel-visual video{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:0;
+  }
+  .hotel-visual::before{
+    content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+    background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.55) 100%);
+  }
+  .hotel-tag{z-index:2}
+  .hotel-monogram{display:none}
+  .hotel-tag{
+    position:absolute;bottom:26px;left:32px;color:#f8f1e3;z-index:2;
+  }
+  .hotel-tag .script{font-size:22px;opacity:.9;margin-bottom:6px;display:block}
+  .hotel-tag .serif{font-family:'Playfair Display',serif;font-size:30px;font-weight:500}
+
+  .hotel-desc{max-width:760px;margin:0 auto;padding:0 8px}
+  .hotel-desc p{margin-bottom:20px;font-size:18px}
+  .hotel-desc .lede{
+    font-family:'Cormorant Garamond',serif;font-size:24px;
+    line-height:1.55;color:var(--ink);margin-bottom:30px;font-style:italic;
+  }
+
+  /* FEATURES ROW */
+  .features{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:var(--rule);margin:40px 0;
+    border:1px solid var(--rule);
+  }
+  .feature{
+    background:var(--bg);padding:28px 18px;text-align:center;
+  }
+  .hotel.mer .feature{background:#edf3f6}
+  .feature-ico{
+    font-family:'Playfair Display',serif;font-weight:500;
+    font-size:26px;color:var(--terracotta);margin-bottom:8px;
+  }
+  .hotel.mer .feature-ico{color:var(--sea)}
+  .feature-label{
+    font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-soft);line-height:1.4;
+  }
+
+  /* PULL QUOTE */
+  .pull{
+    margin:40px auto;max-width:640px;text-align:center;
+    padding:30px 20px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  }
+  .pull q{
+    font-family:'Playfair Display',serif;font-style:italic;
+    font-size:24px;line-height:1.5;color:var(--ink);quotes:'«' '»';
+  }
+  .pull q::before{color:var(--terracotta);margin-right:6px}
+  .pull q::after{color:var(--terracotta);margin-left:6px}
+  .pull-author{
+    margin-top:14px;font-family:'Cormorant Garamond',serif;
+    font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);
+  }
+
+  /* CTA LINKS */
+  .hotel-links{
+    display:flex;gap:14px;justify-content:center;margin-top:40px;flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;padding:14px 28px;
+    font-family:'Inter',sans-serif;font-size:13px;font-weight:500;
+    letter-spacing:.18em;text-transform:uppercase;
+    border:1px solid var(--terracotta);color:var(--terracotta);
+    border-radius:0;background:transparent;transition:all .2s;
+  }
+  .btn:hover{background:var(--terracotta);color:#fff;border-bottom-color:var(--terracotta)}
+  .btn.primary{background:var(--terracotta);color:#fff}
+  .btn.primary:hover{background:var(--terracotta-dark);border-color:var(--terracotta-dark)}
+  .hotel.mer .btn{border-color:var(--sea);color:var(--sea)}
+  .hotel.mer .btn:hover{background:var(--sea);color:#fff}
+  .hotel.mer .btn.primary{background:var(--sea);color:#fff}
+  .hotel.mer .btn.primary:hover{background:#1c3e4e;border-color:#1c3e4e}
+
+  /* GALLERY */
+  .gallery{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+    margin:50px 0 20px;
+  }
+  .gallery-item{
+    position:relative;aspect-ratio:4/5;overflow:hidden;
+    box-shadow:0 10px 30px -12px rgba(0,0,0,.15);
+  }
+  .gallery-item img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    transition:transform .6s ease;
+  }
+  .gallery-item:hover img{transform:scale(1.04)}
+  .gallery-caption{
+    position:absolute;bottom:0;left:0;right:0;
+    padding:14px 14px 12px;
+    background:linear-gradient(180deg,transparent,rgba(0,0,0,.7));
+    color:#f8f1e3;
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;
+    letter-spacing:.05em;
+  }
+  @media (max-width:720px){
+    .gallery{grid-template-columns:repeat(2,1fr);gap:6px}
+  }
+
+  /* ITINERARY */
+  .itinerary{background:var(--bg-warm);padding:100px 0}
+  .itin-header{text-align:center;margin-bottom:60px}
+  .itin-grid{
+    display:grid;grid-template-columns:120px 1fr;gap:0;
+  }
+  .itin-day{
+    display:contents;
+  }
+  .itin-cell{
+    padding:30px 20px;border-top:1px solid var(--rule);
+  }
+  .itin-day:last-child .itin-cell{border-bottom:1px solid var(--rule)}
+  .itin-date{
+    font-family:'Playfair Display',serif;text-align:right;padding-right:30px;
+  }
+  .itin-day-num{
+    font-size:44px;font-weight:500;line-height:1;color:var(--terracotta);
+    display:block;margin-bottom:6px;
+  }
+  .itin-day-name{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:18px;color:var(--ink-soft);
+  }
+  .itin-content h4{
+    font-family:'Playfair Display',serif;font-weight:500;
+    font-size:22px;margin-bottom:6px;
+  }
+  .itin-content .loc{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:16px;color:var(--olive);margin-bottom:14px;
+  }
+  .itin-content p{font-size:16px;color:var(--ink-soft);line-height:1.65}
+
+  /* MOMENTS */
+  .moments{padding:100px 0;background:var(--bg)}
+  .moments-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-top:50px;
+  }
+  .moment{
+    padding:36px 32px;border:1px solid var(--rule);
+    position:relative;background:var(--bg-warm);
+  }
+  .moment-num{
+    font-family:'Playfair Display',serif;font-style:italic;
+    font-size:60px;color:var(--gold);line-height:.8;position:absolute;
+    top:-4px;right:22px;opacity:.35;
+  }
+  .moment h4{
+    font-family:'Playfair Display',serif;font-weight:500;
+    font-size:22px;margin-bottom:10px;letter-spacing:-.2px;
+  }
+  .moment .sub{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:16px;color:var(--terracotta);margin-bottom:14px;
+  }
+  .moment p{font-size:15px;color:var(--ink-soft);line-height:1.65}
+
+  /* PRACTICAL */
+  .practical{background:#2a2622;color:#e8dfcf;padding:90px 0}
+  .practical .section-eyebrow{color:#ffd9a8}
+  .practical .section-title{color:#f5ebda}
+  .practical .section-title em{color:#ffd9a8}
+  .practical-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:50px;
+  }
+  .practical h4{
+    font-family:'Playfair Display',serif;font-weight:500;font-size:24px;
+    margin-bottom:20px;color:#f5ebda;
+  }
+  .practical ul{list-style:none;padding:0}
+  .practical li{
+    padding:14px 0;border-bottom:1px solid rgba(200,180,140,.15);
+    font-size:16px;line-height:1.6;color:#d8cdb8;
+  }
+  .practical li strong{color:#ffd9a8;font-weight:500}
+  .practical a{color:#ffd9a8;border-bottom-color:rgba(255,217,168,.3)}
+
+  /* FOOTER */
+  footer{
+    padding:60px 28px;text-align:center;background:var(--bg-warm);
+    border-top:1px solid var(--rule);
+  }
+  .sig{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:22px;color:var(--ink);margin-bottom:12px;
+  }
+  .sig-name{
+    font-family:'Playfair Display',serif;font-weight:500;font-size:20px;
+    color:var(--terracotta);letter-spacing:.05em;
+  }
+  .footer-meta{
+    margin-top:30px;font-size:13px;letter-spacing:.15em;
+    text-transform:uppercase;color:var(--ink-soft);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width:720px){
+    .hero{padding:80px 22px 70px}
+    section{padding:60px 0}
+    .at-glance-grid{grid-template-columns:repeat(2,1fr)}
+    .glance-cell:nth-child(2){border-right:none}
+    .glance-cell:nth-child(1),.glance-cell:nth-child(2){border-bottom:1px solid var(--rule)}
+    .features{grid-template-columns:repeat(2,1fr)}
+    .moments-grid{grid-template-columns:1fr}
+    .itin-grid{grid-template-columns:90px 1fr}
+    .itin-day-num{font-size:34px}
+    .practical-grid{grid-template-columns:1fr;gap:40px}
+    .hotel-visual{height:260px}
+  }
+  @media print{
+    .hero{background:var(--bg-warm);color:var(--ink)}
+    .hotel.mer{background:var(--bg)}
+    .practical{background:var(--bg-warm);color:var(--ink)}
+    .btn{border-color:var(--ink);color:var(--ink)}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">Itinéraire privé</div>
+    <h1 class="hero-title">Un week-end<br><em>en Provence</em></h1>
+    <div class="hero-ornament"></div>
+    <div class="hero-tagline">Quatre nuits entre les Alpilles et la Méditerranée.<br>Pour Julien, Laura &amp; Elie.</div>
+    <div class="hero-dates">14 &middot; 18 mai 2026</div>
+  </div>
+</header>
+
+<!-- PROLOGUE -->
+<section class="prologue">
+  <main>
+    <div class="section-eyebrow">L'esprit du séjour</div>
+    <h2 class="section-title">Le luxe, <em>ralenti.</em></h2>
+    <p class="drop">
+      Quatre nuits, deux maisons. L'une tapie au pied d'un village minéral, dans le parc des Alpilles, où les platanes filtrent la lumière sur la plus fameuse table trois étoiles de Provence. L'autre perchée sur une colline privée, face à la plus belle baie de la Côte d'Azur, où vingt-sept villas se cachent dans la garrigue et un spa signé Nescens invite à se réparer.
+    </p>
+    <p>
+      Aucune course. Des trajets courts, pensés pour Elie. Des chambres pour s'étirer, des terrasses pour respirer, un room service d'exception pour les soirs où la tranquillité prime. Des tables qu'on attend toute une vie et une cuisine de jour qui s'accommode d'une poussette sous les oliviers.
+    </p>
+    <p>
+      Cette proposition est conçue comme une parenthèse — à la fois romantique et familiale, sans compromis sur l'un ou l'autre.
+    </p>
+  </main>
+</section>
+
+<!-- AT A GLANCE -->
+<section class="at-glance">
+  <main>
+    <div style="text-align:center">
+      <div class="section-eyebrow">En un coup d'œil</div>
+      <h2 class="section-title">Quatre nuits, <em>deux adresses rares.</em></h2>
+    </div>
+    <div class="at-glance-grid">
+      <div class="glance-cell">
+        <div class="glance-num">4</div>
+        <div class="glance-label">nuits</div>
+      </div>
+      <div class="glance-cell">
+        <div class="glance-num">2</div>
+        <div class="glance-label">hôtels 5★</div>
+      </div>
+      <div class="glance-cell">
+        <div class="glance-num">4</div>
+        <div class="glance-label">étoiles Michelin</div>
+      </div>
+      <div class="glance-cell">
+        <div class="glance-num">1</div>
+        <div class="glance-label">nourrisson radieux</div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- HOTEL 1 — BAUMANIÈRE -->
+<section class="hotel alpilles" id="baumaniere">
+  <main>
+    <div class="hotel-header">
+      <div class="hotel-chapter">Chapitre premier — Les Alpilles</div>
+      <h2 class="hotel-name">Baumanière</h2>
+      <div class="hotel-loc">Les Baux-de-Provence</div>
+    </div>
+
+    <div class="hotel-visual">
+      <div class="hotel-tag">
+        <span class="script">Nuits 1 &amp; 2</span>
+        <span class="serif">14 → 16 mai</span>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://www.baumaniere.com/wp-content/uploads/2026/01/chambre-FLORA-22-bd@Baumaniere-2.jpg" alt="Chambre Flora — Baumanière" loading="lazy">
+        <div class="gallery-caption">La chambre</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://www.baumaniere.com/wp-content/uploads/Terrasse-lOustau-1024x682.jpg" alt="Terrasse de L'Oustau de Baumanière" loading="lazy">
+        <div class="gallery-caption">L'Oustau, 3 étoiles</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://www.baumaniere.com/wp-content/uploads/2026/02/TISANERIE-SPA-BAUMANIERE-bis-980x653.jpg" alt="Spa de Baumanière" loading="lazy">
+        <div class="gallery-caption">Le spa</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://www.baumaniere.com/wp-content/uploads/2021/09/baux-de-provence-baumaniere.jpg" alt="Village des Baux-de-Provence" loading="lazy">
+        <div class="gallery-caption">Les Baux, le village</div>
+      </div>
+    </div>
+
+    <div class="hotel-desc">
+      <p class="lede">Une institution provençale au pied du village perché des Baux, vingt hectares de jardins, de vignes et d'oliviers, cinq bâtiments historiques, et, dans la grande salle voûtée de l'Oustau, l'une des cuisines les plus célébrées de France.</p>
+
+      <p>Baumanière, c'est d'abord une histoire : celle d'une famille qui depuis 1945 cultive ici l'art de recevoir, sur un domaine minéral où les pierres sèches, les cigales et la lavande composent une partition parfaite. L'hôtel s'étire sur cinq maisons — L'Oustau, Le Manoir, Flora, Carita et, depuis 2023, La Maison de Famille — chaque chambre conçue par Geneviève Charial, la propriétaire, dans un équilibre d'ancien et de moderne.</p>
+
+      <p>Trois piscines chauffées, un spa Sisley/My Blend by Clarins, des jardins où l'on peut se perdre longtemps avec un porte-bébé. Et surtout, <strong>deux tables exceptionnelles</strong> : <em>L'Oustau de Baumanière</em>, trois étoiles Michelin sous la houlette de Glenn Viel, et <em>La Cabro d'Or</em>, étoilée aussi, plus détendue, servie sous les platanes dans un jardin à l'italienne — parfaite pour un déjeuner avec Elie dans la poussette.</p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-ico">★★★</div>
+          <div class="feature-label">3 étoiles<br>Michelin</div>
+        </div>
+        <div class="feature">
+          <div class="feature-ico">20ha</div>
+          <div class="feature-label">Jardins<br>Alpilles</div>
+        </div>
+        <div class="feature">
+          <div class="feature-ico">3</div>
+          <div class="feature-label">Piscines<br>chauffées</div>
+        </div>
+        <div class="feature">
+          <div class="feature-ico">R&amp;C</div>
+          <div class="feature-label">Relais &amp;<br>Châteaux</div>
+        </div>
+      </div>
+
+      <div class="pull">
+        <q>Les grandes cuisines ne naissent qu'au cœur de grands paysages.</q>
+        <div class="pull-author">Esprit du domaine</div>
+      </div>
+
+      <p><strong>L'expérience qu'on vous propose ici.</strong> Le premier soir, dîner léger à la suite pour se remettre du voyage. Vendredi, spa et piscine le matin ; déjeuner à La Cabro d'Or, assis sous les platanes, Elie tranquille dans la poussette ; après-midi flâneries aux Baux ou, si l'envie vient, aux Carrières des Lumières à dix minutes ; et le soir — <em>le grand soir</em> — on dîne à L'Oustau de Baumanière, trois étoiles, pendant qu'une baby-sitter de l'hôtel veille sur Elie à la suite.</p>
+
+      <div class="hotel-links">
+        <a class="btn primary" href="https://www.baumaniere.com/fr/" target="_blank" rel="noopener">Site officiel</a>
+        <a class="btn" href="https://www.relaischateaux.com/fr/france/baumaniere-hotel-spa-les-baux-de-provence" target="_blank" rel="noopener">Galerie Relais &amp; Châteaux</a>
+        <a class="btn" href="https://guide.michelin.com/fr/fr/provence-alpes-cote-d-azur/les-baux-de-provence/restaurant/l-oustau-de-baumaniere" target="_blank" rel="noopener">L'Oustau au Guide Michelin</a>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- HOTEL 2 — LA RÉSERVE -->
+<section class="hotel mer" id="lareserve">
+  <main>
+    <div class="hotel-header">
+      <div class="hotel-chapter">Chapitre second — La Méditerranée</div>
+      <h2 class="hotel-name">La Réserve Ramatuelle</h2>
+      <div class="hotel-loc">Saint-Tropez &middot; Baie de Pampelonne</div>
+    </div>
+
+    <div class="hotel-visual">
+      <video autoplay muted loop playsinline poster="https://www.lareserve-ramatuelle.com/wp-content/uploads/2021/02/dji_0755-modifier-1-1.jpg">
+        <source src="https://www.lareserve-ramatuelle.com/wp-content/uploads/2025/01/lrr_heroloop_home_desktop_720_2025.mp4" type="video/mp4">
+      </video>
+      <div class="hotel-tag">
+        <span class="script">Nuits 3 &amp; 4</span>
+        <span class="serif">16 → 18 mai</span>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://www.lareserve-ramatuelle.com/wp-content/uploads/2024/08/2.chambre-deluxe-vue-mer-avec-terrasse.jpg" alt="Chambre Deluxe vue mer avec terrasse" loading="lazy">
+        <div class="gallery-caption">Chambre vue mer</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://www.lareserve-ramatuelle.com/wp-content/uploads/2024/10/lrr_accomodation_villa-10_bygregoiregardette_4761_bd.jpg" alt="Villa privée avec piscine — La Réserve" loading="lazy">
+        <div class="gallery-caption">Les villas privées</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://www.lareserve-ramatuelle.com/wp-content/uploads/2023/08/07_restaurant.jpg" alt="Restaurant gastronomique — La Réserve" loading="lazy">
+        <div class="gallery-caption">La table</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://www.lareserve-ramatuelle.com/wp-content/uploads/2023/08/le-pool-restaurant.jpg" alt="Pool restaurant — La Réserve" loading="lazy">
+        <div class="gallery-caption">La pool, face à la mer</div>
+      </div>
+    </div>
+
+    <div class="hotel-desc">
+      <p class="lede">Sur une colline privée au-dessus de Ramatuelle, entre les parasols-pins et la garrigue odorante, La Réserve ouvre sur l'une des plus belles baies du monde — et l'un des plus vastes spas d'Europe.</p>
+
+      <p>Imaginée par Michel Reybier, la propriété doit son âme à son emplacement : <strong>un domaine entier pour soi</strong>, à quelques minutes de Saint-Tropez mais coupé de toute agitation. Vingt-huit chambres et suites ; quatorze villas privées avec jardin clos et piscine à soi ; une architecture qui dialogue avec la pierre de Provence ; partout, en arrière-plan, la mer qui scintille jusqu'à l'horizon.</p>
+
+      <p>Le cœur de la maison, c'est le <strong>Spa Nescens</strong> — mille mètres carrés pensés par le Dr Claude Dalle autour de la médecine anti-âge, onze cabines, piscine intérieure chauffée, hammam, vue sur la mer depuis la salle de sport. Une destination en soi. Côté table, un restaurant gastronomique saisonnier, et une cuisine plus décontractée à la pool — tous deux traversés par les produits du potager du domaine.</p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-ico">28</div>
+          <div class="feature-label">Suites &amp;<br>villas privées</div>
+        </div>
+        <div class="feature">
+          <div class="feature-ico">1000</div>
+          <div class="feature-label">m² de Spa<br>Nescens</div>
+        </div>
+        <div class="feature">
+          <div class="feature-ico">★</div>
+          <div class="feature-label">Palace<br>France</div>
+        </div>
+        <div class="feature">
+          <div class="feature-ico">∞</div>
+          <div class="feature-label">Vue baie de<br>Pampelonne</div>
+        </div>
+      </div>
+
+      <div class="pull">
+        <q>Un balcon posé sur la plus belle baie de Méditerranée — et une parenthèse à l'intérieur.</q>
+        <div class="pull-author">L'écriture du lieu</div>
+      </div>
+
+      <p><strong>L'expérience qu'on vous propose ici.</strong> Check-in en début d'après-midi après la route — on gagne directement la terrasse, déjeuner léger à la pool, temps pour Elie. L'après-midi, spa Nescens pour Laura (soin signature d'une heure et demie), pendant que Papa tient compagnie à Elie sur la terrasse face à la mer. Dimanche, on ne fait rien : matinée piscine, déjeuner tardif, sieste provençale, apéro sunset les pieds dans la garrigue, dîner en suite ou au gastronomique.</p>
+
+      <div class="hotel-links">
+        <a class="btn primary" href="https://www.lareserve-ramatuelle.com/fr/" target="_blank" rel="noopener">Site officiel</a>
+        <a class="btn" href="https://www.michelreybierhospitality.com/fr/hotel/la-reserve-ramatuelle/" target="_blank" rel="noopener">Michel Reybier Hospitality</a>
+        <a class="btn" href="https://www.lhw.com/hotel/La-Reserve-Ramatuelle-Hotel-Spa-Villas-Ramatuelle-France" target="_blank" rel="noopener">Leading Hotels of the World</a>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- ITINERARY -->
+<section class="itinerary">
+  <main>
+    <div class="itin-header">
+      <div class="section-eyebrow">Jour par jour</div>
+      <h2 class="section-title">L'<em>itinéraire.</em></h2>
+      <p class="section-lede" style="margin:30px auto 0;text-align:center">Tempo lent. Deux transferts courts, pensés pour Elie. Des moments forts, des pauses longues.</p>
+    </div>
+
+    <div class="itin-grid">
+
+      <div class="itin-day">
+        <div class="itin-cell itin-date">
+          <span class="itin-day-num">14</span>
+          <span class="itin-day-name">Jeudi<br>après-midi</span>
+        </div>
+        <div class="itin-cell itin-content">
+          <h4>Paris → Marseille → Les Baux</h4>
+          <div class="loc">Gare Saint-Charles &middot; 1h de route</div>
+          <p>Arrivée en gare de Marseille, récupération de la voiture, route apaisante vers l'est à travers la plaine de la Crau. Check-in à Baumanière en fin d'après-midi. Une promenade courte dans les jardins du domaine avant la tombée du jour. Dîner léger à la suite — on se repose.</p>
+        </div>
+      </div>
+
+      <div class="itin-day">
+        <div class="itin-cell itin-date">
+          <span class="itin-day-num">15</span>
+          <span class="itin-day-name">Vendredi</span>
+        </div>
+        <div class="itin-cell itin-content">
+          <h4>Alpilles, soin, et trois étoiles</h4>
+          <div class="loc">Baumanière &middot; village des Baux &middot; L'Oustau de Baumanière</div>
+          <p>Matinée spa et piscine. Déjeuner sous les platanes de La Cabro d'Or, étoilée et conviviale. Après-midi au village des Baux-de-Provence ou détour aux Carrières des Lumières. En soirée, baby-sitter, robe longue, et dîner à L'Oustau de Baumanière — Glenn Viel, trois étoiles. <em>Le dîner du séjour.</em></p>
+        </div>
+      </div>
+
+      <div class="itin-day">
+        <div class="itin-cell itin-date">
+          <span class="itin-day-num">16</span>
+          <span class="itin-day-name">Samedi</span>
+        </div>
+        <div class="itin-cell itin-content">
+          <h4>Des Alpilles à la Méditerranée</h4>
+          <div class="loc">Route A8 &middot; 1h45 &middot; arrivée La Réserve vers midi</div>
+          <p>Check-out matinal à Baumanière, la route prend la direction de l'est — A8 jusqu'à Sainte-Maxime, puis la descente vers Ramatuelle. Arrivée à La Réserve pour le déjeuner à la pool. Installation dans la suite, après-midi spa Nescens pour Laura. Dîner au restaurant gastronomique ou, si la fatigue gagne, à la suite avec la mer devant soi.</p>
+        </div>
+      </div>
+
+      <div class="itin-day">
+        <div class="itin-cell itin-date">
+          <span class="itin-day-num">17</span>
+          <span class="itin-day-name">Dimanche</span>
+        </div>
+        <div class="itin-cell itin-content">
+          <h4>La journée sans programme</h4>
+          <div class="loc">La Réserve Ramatuelle</div>
+          <p>Petit-déjeuner en terrasse. La piscine à disposition, le spa en reprise, la garrigue qui embaume. Déjeuner tardif. Éventuellement une courte balade à pied à Ramatuelle village en fin d'après-midi. Apéritif face à la baie au moment où la lumière bascule. Dîner au choix.</p>
+        </div>
+      </div>
+
+      <div class="itin-day">
+        <div class="itin-cell itin-date">
+          <span class="itin-day-num">18</span>
+          <span class="itin-day-name">Lundi<br>matin</span>
+        </div>
+        <div class="itin-cell itin-content">
+          <h4>Retour à Marseille</h4>
+          <div class="loc">Départ 7h30-8h &middot; 2h de route &middot; train vers Paris</div>
+          <p>Départ tôt pour anticiper la route — biberons dans la voiture, arrêt café éventuel en chemin, arrivée à Saint-Charles avec une marge confortable. Restitution de la voiture. Train vers Paris.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</section>
+
+<!-- MOMENTS -->
+<section class="moments">
+  <main>
+    <div style="text-align:center">
+      <div class="section-eyebrow">Les moments qu'on n'oubliera pas</div>
+      <h2 class="section-title">Cinq <em>instants.</em></h2>
+    </div>
+    <div class="moments-grid">
+      <div class="moment">
+        <div class="moment-num">i.</div>
+        <h4>Le dîner de L'Oustau</h4>
+        <div class="sub">Vendredi 15 mai — trois étoiles Michelin</div>
+        <p>Sous les voûtes de pierre blonde de Baumanière, la cuisine de Glenn Viel — un héritage, une précision, une joie. Le moment gastronomique du séjour, prévu pendant qu'une baby-sitter de l'hôtel veille sur Elie à la suite.</p>
+      </div>
+      <div class="moment">
+        <div class="moment-num">ii.</div>
+        <h4>Le déjeuner de La Cabro d'Or</h4>
+        <div class="sub">Midi sous les platanes, étoilé, détendu</div>
+        <p>L'autre table de la maison, pleine lumière, à deux pas d'une piscine. La poussette rentre sans problème, la cuisine est savoureuse et accessible. Un vrai déjeuner de Provence, en famille.</p>
+      </div>
+      <div class="moment">
+        <div class="moment-num">iii.</div>
+        <h4>La baie de Pampelonne, depuis la suite</h4>
+        <div class="sub">Samedi soir — l'instant mer</div>
+        <p>Quatre heures de route, un badge-clé, une porte qui s'ouvre, et la mer — immense, à perte de vue, étalée entre les pins. Le moment pour lequel on traverse la France.</p>
+      </div>
+      <div class="moment">
+        <div class="moment-num">iv.</div>
+        <h4>Le soin signature Nescens</h4>
+        <div class="sub">Spa de La Réserve — mille mètres carrés</div>
+        <p>Un protocole anti-âge de 90 minutes pour Laura, pendant que Papa et Elie s'étirent sur la terrasse. La signature d'un spa reconnu comme l'un des meilleurs d'Europe.</p>
+      </div>
+      <div class="moment">
+        <div class="moment-num">v.</div>
+        <h4>Le dimanche qu'on n'a jamais eu</h4>
+        <div class="sub">Une journée entière, sans rien</div>
+        <p>Pas de réservation, pas de départ, pas d'obligation. Juste la piscine, les livres, la mer, les repas étirés, Elie qui dort sur les genoux. L'objet même de ce week-end.</p>
+      </div>
+      <div class="moment">
+        <div class="moment-num">vi.</div>
+        <h4>Le silence des villas</h4>
+        <div class="sub">Les deux adresses — pensées pour un nourrisson</div>
+        <p>Vingt-huit unités à La Réserve. Des suites entourées de jardins à Baumanière. Aucun bruit de voisinage, pas de couloir bruyant, des terrasses privées pour le change du petit, un room service de très haut niveau pour les soirs en chambre. La luxe au service de l'intimité familiale.</p>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- PRACTICAL -->
+<section class="practical">
+  <main>
+    <div class="section-eyebrow">Ce qu'il faut savoir</div>
+    <h2 class="section-title">En <em>pratique.</em></h2>
+    <div class="practical-grid">
+      <div>
+        <h4>Logistique</h4>
+        <ul>
+          <li><strong>Train</strong> — Paris → Marseille (TGV), jeudi 14 après-midi. Retour lundi 18 matin.</li>
+          <li><strong>Voiture</strong> — location à Saint-Charles à l'arrivée, catégorie confortable avec siège bébé.</li>
+          <li><strong>Trajets</strong> — 1h à l'arrivée ; 1h45 à mi-séjour ; 2h au retour (départ tôt pour marge).</li>
+          <li><strong>Distance totale voiture</strong> — ~5h sur quatre jours, toujours fractionnées.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>À confirmer avant de réserver</h4>
+        <ul>
+          <li><strong>Disponibilité</strong> — à caler rapidement (3-4 semaines avant le séjour). La Réserve Ramatuelle rouvre le 1ᵉʳ mai 2026 — nos dates sont dans la fenêtre.</li>
+          <li><strong>Équipement bébé</strong> — lit parapluie, chauffe-biberon, baignoire pour Elie dans les deux hôtels (à confirmer au moment de la réservation).</li>
+          <li><strong>Baby-sitter</strong> — réservable via le concierge pour la soirée L'Oustau de Baumanière.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <main>
+    <div class="sig">« J'ai hâte d'y être avec toi. »</div>
+    <div class="sig-name">— Julien</div>
+    <div class="footer-meta">Itinéraire privé &middot; Provence &middot; 14-18 mai 2026</div>
+  </main>
+</footer>
+
+</body>
+</html>
